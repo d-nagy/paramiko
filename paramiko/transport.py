@@ -2265,7 +2265,7 @@ class Transport(threading.Thread, ClosingContextManager):
             if i == 0:
                 timeout = self.banner_timeout
             else:
-                timeout = 10
+                timeout = 60
             try:
                 buf = self.packetizer.readline(timeout)
             except ProxyCommandFailure:
